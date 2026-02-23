@@ -47,7 +47,9 @@ Here is the folder structure of this app.
 ```bash
 modern-portfolio/
   |- .firebase/
+    |-- hosting.b3V0.cache
     |-- hosting.cHVibGlj.cache
+    |-- hosting.eQ.cache
   |- components/
     |-- Avatar.jsx
     |-- Bulb.jsx
@@ -65,6 +67,8 @@ modern-portfolio/
     |-- TopLeftImg.jsx
     |-- Transition.jsx
     |-- WorkSlider.jsx
+  |- firebase/
+    |-- config.js
   |- pages/
     |-- about/
     |-- contact/
