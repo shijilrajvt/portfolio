@@ -46,6 +46,8 @@ Here is the folder structure of this app.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 modern-portfolio/
+  |- .firebase/
+    |-- hosting.cHVibGlj.cache
   |- components/
     |-- Avatar.jsx
     |-- Bulb.jsx
@@ -75,7 +77,9 @@ modern-portfolio/
   |- styles/
     |-- globals.css
   |- .eslintrc.json
+  |- .firebaserc
   |- .gitignore
+  |- firebase.json
   |- netlify.toml
   |- next.config.js
   |- package-lock.json
@@ -129,6 +133,7 @@ Useful resources and dependencies that are used in Modern Portfolio.
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.14
 - [eslint](https://www.npmjs.com/package/eslint): 8.41.0
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 13.4.3
+- [firebase](https://www.npmjs.com/package/firebase): ^12.9.0
 - [framer-motion](https://www.npmjs.com/package/framer-motion): ^10.12.16
 - [next](https://www.npmjs.com/package/next): 15.5.10
 - [postcss](https://www.npmjs.com/package/postcss): ^8.4.23
