@@ -1,33 +1,37 @@
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
+import { collection, addDoc } from "firebase/firestore";
 
 import { fadeIn } from "../../variants";
 import { useState } from "react";
+import { db } from "../../firebase/config";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+    const formData = new FormData(event.target);
+    const name = formData.get("name");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
 
-    fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          alert("Thank you. I will get back to you ASAP.");
-        } else {
-          console.log(res);
-        }
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    try {
+      await addDoc(collection(db, "users"), {
+        name,
+        subject,
+        message,
+      });
+      alert("Thank you. I will get back to you ASAP.");
+      event.target.reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
