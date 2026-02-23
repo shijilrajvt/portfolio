@@ -32,10 +32,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            I’m a passionate Frontend Developer  with 4+ years of experience building scalable, user-friendly web applications. I specialize in React, JavaScript, and modern UI development, turning complex requirements into seamless digital experiences. Let’s build smart, efficient, and impactful solutions together.
           </motion.p>
 
           {/* btn */}
@@ -72,7 +69,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[737px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
         >
           <Avatar />
         </motion.div>

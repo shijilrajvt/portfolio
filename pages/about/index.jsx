@@ -32,26 +32,20 @@ export const aboutData = [
           FaCss3,
           FaJs,
           FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
         ],
-      },
-      {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
-      },
+      }
+
     ],
   },
   {
-    title: "awards",
+    title: "Education",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Btech in IT College Of Engineering Vadakara",
+        stage: "2009 - 2010",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
+        title: "Diploma in Applied Electronics ",
         stage: "2009 - 2010",
       },
     ],
@@ -60,36 +54,15 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "UI Developer - Invigo Software Pvt Ltd",
+        stage: "2021-Present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
+        title: "Web Developer - Antrica Solutions",
+        stage: "2020 - 2021",
+      }
     ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
+  }
 ];
 
 const About = () => {
@@ -105,7 +78,7 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex absolute  -left-[370px]"
       >
         <Avatar />
       </motion.div>
@@ -120,8 +93,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Building <span className="text-accent">impactful solutions</span> through clean code and smart design.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -129,9 +101,7 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            With 4+ years of experience as a Frontend Developer , I craft responsive, scalable, and performance-driven web applications. I specialize in React, JavaScript, and modern UI architecture — delivering seamless digital experiences that solve real business problems.
           </motion.p>
 
           {/* counters */}
@@ -145,7 +115,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={4} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -153,34 +123,34 @@ const About = () => {
               </div>
 
               {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={250} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients.
                 </div>
-              </div>
+              </div> */}
 
               {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={650} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects.
                 </div>
-              </div>
+              </div> */}
 
               {/* awards */}
-              <div className="relative flex-1">
+              {/* <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={8} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Winning awards.
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -197,10 +167,9 @@ const About = () => {
             {aboutData.map((item, itemI) => (
               <div
                 key={itemI}
-                className={`${
-                  index === itemI &&
+                className={`${index === itemI &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}
